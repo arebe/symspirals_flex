@@ -32,8 +32,9 @@ void loop() {
   
   flexposition = analogRead(flexpin);
 
-  // change the bwlo values to correspond to the range of flex sensor readings
+  // change the below values to correspond to the range of flex sensor readings
   // and re-map to 0-255
+
   flexposition = map(flexposition, 690, 910, 0, 255);
   flexposition = constrain(flexposition, 0, 255);
 
